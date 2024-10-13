@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <h1 class="my-4 text-center text-white">{{ title }}</h1>    
+
+    {% if cursos %}
+        <table class="table table-bordered table-dark text-center">  <!-- Agregar 'table-bordered' para líneas -->
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Capacidad Máxima</th>
+                    <th scope="col">Profesor</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for curso in cursos %}
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ curso.nombre }}</td>
+                        <td>{{ curso.capacidad_max }}</td>
+                        <td>{{ curso.profesor.nombre }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p class="text-center text-white">No hay cursos disponibles.</p>
+    {% endif %}
+{% endblock %}
