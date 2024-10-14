@@ -12,4 +12,4 @@ class MatriculaForm(forms.ModelForm):
 
     class Meta:
         model = Matricula
-        fields = ['estado', 'fecha_inicio', 'costo', 'estudiante_curso']  # Asegúrate de incluir el campo de estudiante_curso
+        fields = ['estado', 'fecha_inicio', 'costo', 'estudiante_curso']  

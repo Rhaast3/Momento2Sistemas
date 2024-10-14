@@ -19,7 +19,7 @@ def formulario_estudiante(request):
             estudiante = form.save(commit=False)  # No guardar aún en la base de datos
             estudiante.rol = 'Estudiante'  # Asignar el rol predeterminado
             estudiante.save()  # Ahora guarda el estudiante
-            return redirect('lista-estudiantes')  # Redirige a la lista de estudiantes después de guardar
+            return redirect('lista-estudiantes')  # Redirige a la lista de estudiantes despues de guardar
     else:
         form = PersonaForm()
 
@@ -45,7 +45,7 @@ def formulario_profesor(request):
     if request.method == 'POST':
         form = PersonaForm(request.POST)
         if form.is_valid():
-            profesores = form.save(commit=False)  # No guardar aún en la base de datos
+            profesores = form.save(commit=False)  # No guardar aun en la base de datos
             profesores.rol = 'Profesor'  # Asignar el rol predeterminado
             profesores.save()  # Ahora guarda el profesor
             return redirect('lista-profesor')  # Redirige a la lista de profesores después de guardar

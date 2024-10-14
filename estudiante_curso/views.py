@@ -23,13 +23,13 @@ def Estudiante_Curso(request):
         'curso_seleccionado': curso_seleccionado  # Pasar el curso seleccionado para mantenerlo en el formulario
     })
 
-# Vista para agregar o editar una relación de estudiante con curso
+# Vista para agregar una relación de estudiante con curso
 def formulario_estudiante_curso(request):
     if request.method == 'POST':
         form = EstudianteCursoForm(request.POST)
         if form.is_valid():
             form.save()  # Guardar la relación estudiante-curso
-            return redirect('lista-estudiantes-cursos')  # Asegúrate de que este nombre coincida
+            return redirect('lista-estudiantes-cursos') 
     else:
         form = EstudianteCursoForm()  # Formulario vacío si no es POST
 

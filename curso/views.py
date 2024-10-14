@@ -12,13 +12,13 @@ def get_curso(request):
         'cursos': cursos,
     })
 
-# Vista para agregar o editar cursos
+# Vista para agregar cursos
 def formulario(request):
     if request.method == 'POST':
         form = CursoForm(request.POST)
         if form.is_valid():
             form.save()  # Guarda el nuevo curso
-            return redirect('lista-cursos')  # Redirige a la página de lista de cursos después de guardar
+            return redirect('lista-cursos')  # Redirige a la pagina de lista de cursos despues de guardar un curso
     else:
         form = CursoForm()
 

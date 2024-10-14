@@ -3,7 +3,7 @@
 
 <h1>{{ title }}</h1>
 
-<!-- Incluyendo el CSS de DataTables -->
+
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
 
 <!-- Tabla de estudiantes -->
@@ -27,7 +27,7 @@
             <td>{{ estudiante.dni }}</td>
             <td>{{ estudiante.rol }}</td>
             <td>
-                <!-- Botón para eliminar el estudiante por DNI -->
+                <!-- Boton para eliminar el estudiante por DNI -->
                 <a href="{% url 'eliminar-estudiante' estudiante.dni %}" class="btn btn-danger" onclick="return confirm('¿Estás seguro que deseas eliminar este estudiante?');">Eliminar</a>
             </td>
         </tr>
@@ -35,10 +35,10 @@
     </tbody>
 </table>
 
-<!-- Botón para agregar nuevos estudiantes -->
+<!-- Boton para agregar nuevos estudiantes -->
 <a href="{% url 'formulario_estudiante' %}" class="btn btn-primary">Agregar nuevo estudiante</a>
 
-<!-- Incluyendo jQuery y DataTables JS -->
+
 <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
 
