@@ -19,11 +19,14 @@
     </header>
     
 
-    <nav class="nav"style="margin-top: 235px;">>
+    <nav class="nav"style="margin-top: 235px;">
         <ul class="nav justify-content-center">
             <li class="nav-item">
                 <a style="text-decoration: none;" href="{% url "inicio" %}">Inicio</a>
-            </li>            
+            </li>
+            <li class="nav-item">       
+                <a style="text-decoration: none;" href="{% url "lista-profesor" %}">Profesor</a>
+            </li>             
             <li class="nav-item">        
                 <a style="text-decoration: none;" href="{% url "lista-estudiantes" %}">Estudiante</a>
             </li>  
@@ -36,6 +39,7 @@
             <li class="nav-item">        
                 <a style="text-decoration: none;" href="{% url "lista-matriculas" %}">Matriculas</a>
             </li>
+            
         </ul>
     </nav>
 
@@ -57,17 +61,8 @@
     </div>
 
     <style>
-        .bienvenida {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-            font-size: 5em; /* Aumenta el tamaño del texto */
-            font-weight: bold;
-            color: #333;
-            text-align: center;
-        }
-        </style>
+
+    </style>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

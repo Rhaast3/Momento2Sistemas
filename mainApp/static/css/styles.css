@@ -255,9 +255,9 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* Centrado verticalmente */
-    font-size: 5em; /* Aumenta el tamaño del texto */
+    height: 80vh; 
+    font-size: 5em; 
     font-weight: bold;
     color: #333;
-    text-align: center; /* Asegura que el texto esté centrado en líneas múltiples */
+    text-align: center; 
 }
